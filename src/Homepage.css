@@ -1,0 +1,205 @@
+.container_1{
+    width: 80%;
+    height: 85%;
+    /* background-color: #f2f2f2; */
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* ! Left Tab CSS starts from here */
+
+.lefttab{
+    width: 37%;
+    height: 100%;
+    /* border: 2px solid black; */
+    background-color: #f2f2f2;
+    box-shadow: 0px 0px 10px #30812f;
+}
+
+/*! Filter CSS starts here */
+
+.filter{
+    width: 100%;
+    height: 50%;
+    /* background-color: #30812f; */
+    display: block;
+    border-bottom: 2px solid #30812f;
+}
+
+.filter_label{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+    color: #30812f;
+    text-align: center;
+}
+
+.filter_options{
+    width: 100%;
+    height: 70%;
+    display: block;
+    /* background-color: #1ccd19; */
+}
+
+.search,.filter_category_wrap,.min,.max{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_box,.filter_category,.min_value,.max_value{
+    border: 1px solid #2f2f2f66;
+    width: 90%;
+    height: 25px;
+    padding: 0px 10px;
+}
+
+.filter_category{
+    background-color: #30812f;
+    color: #f2f2f2;
+}
+
+.search_filter{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.search_button{
+    width: 33%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: #30812f;
+    color: #f2f2f2;
+}
+
+/*! Filter CSS ends here */
+/*! Stats CSS starts from here */
+
+.stats{
+    width: 100%;
+    height: 50%;
+    /* background-color: #1ccd19; */
+}
+
+.stats_label{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+    color: #30812f;
+    text-align: center;
+}
+
+/*! Stats CSS ends here */
+/* !Left Tab CSS ends here */
+
+.expensearea{
+    width: 57%;
+    height: 100%;
+    /* border: 2px solid black; */
+    background-color: #f2f2f2;
+    display: block;
+    box-shadow: 0px 0px 10px #30812f;
+}
+
+.expensehead{
+    width: 100%;
+    height: 8%;
+    border: none;
+    /* border-bottom:2px solid #2f2f2f; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #30812f;
+    /* text-align: center; */
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    /* text-shadow: 0px 0px 10px #30812f; */
+    box-shadow: 0px 0px 10px #30812f;
+}
+
+.expenselist{
+    width: 100%;
+    height: 80%;
+    /* background-color: blue; */
+    padding: 10px 20px;
+}
+
+.expenseinput{
+    width: 100%;
+    height: 12%;
+    /* background-color: #30812f; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0px 0px 10px #30812f;
+}
+
+.expensecategory_wrap,.expensename_wrap,.expenseamount_wrap{
+    width: 25%;
+    height: 100%;
+    display:inline-block;
+    padding-top: 4%;
+}
+
+.expensecategory_l,.expensename_l,.expenseamount_l{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expensecategory,.expensename,.expenseamount{
+    width: 100%;
+    display: flex;
+    margin-top: 7%;
+    border: 1px solid #2f2f2f66;
+    /* border-radius: 5px; */
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.expensecategory{
+    background-color: #30812f;
+    color: #f2f2f2;
+}
+
+.expensecategory:focus,.expensename:focus,.expenseamount:focus{
+    border: 1px solid #30812f;
+    box-shadow: 0px 0px 2px #1ccd19;
+}
+
+.category_sel{
+    display: flex;
+    justify-content: center;
+}
+
+.save{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.save_button{
+    width: 100%;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
