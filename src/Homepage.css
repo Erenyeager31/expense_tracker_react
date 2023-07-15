@@ -1,6 +1,6 @@
 .container_1{
-    width: 80%;
-    height: 85%;
+    width: 90%;
+    height: 75%;
     /* background-color: #f2f2f2; */
     margin-top: 2%;
     display: flex;
@@ -14,21 +14,31 @@
 /* ! Left Tab CSS starts from here */
 
 .lefttab{
-    width: 37%;
+    width: 49%;
     height: 100%;
     /* border: 2px solid black; */
+    display: block;
     background-color: #f2f2f2;
     box-shadow: 0px 0px 10px #30812f;
+}
+
+/* !CSS for upper div */
+
+.upper{
+    width: 100%;
+    height: 50%;
+    display: flex;
 }
 
 /*! Filter CSS starts here */
 
 .filter{
-    width: 100%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
     /* background-color: #30812f; */
     display: block;
-    border-bottom: 2px solid #30812f;
+    /* border-bottom: 2px solid #30812f; */
+    border-right: 2px solid #30812f;
 }
 
 .filter_label{
@@ -73,6 +83,7 @@
     justify-content: right;
     align-items: center;
     padding-right: 5%;
+    margin-top: -5px;
 }
 
 .search_button{
@@ -89,12 +100,16 @@
 /*! Stats CSS starts from here */
 
 .stats{
-    width: 100%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
     /* background-color: #1ccd19; */
+    /* border-bottom: 2px solid #30812f; */
+    display: block;
 }
 
 .stats_label{
+    width: 100%;
+    height: 10%;
     text-transform: uppercase;
     font-size: 25px;
     font-weight: 700;
@@ -102,11 +117,130 @@
     text-align: center;
 }
 
+.stats_list{
+    width: 100%;
+    height: 90%;
+    /* background-color: yellow; */
+    overflow-y: scroll;
+    padding: 5px 5px;
+}
+
+.stats_wrap{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statslabel{
+    width: 80%;
+    height: 25px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #30812f;
+    text-align: left;
+}
+
+.stats_val{
+    width: 20%;
+    height: 25px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.category_wise{
+    margin-top: 10px;
+}
+
+.categorywise_label{
+    text-align: center;
+    text-transform: uppercase;
+    color: #52a547;
+    font-weight: 700;
+    border-bottom: 2px solid #30812f;
+    border-top: 2px solid #30812f;
+    /* text-shadow: 0px 0px 10px #30812f; */
+    margin-bottom: 10px;
+}
+
+.category_ol_label p{
+    width: 100%;
+    height: 25px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #30812f;
+    text-align: left;
+}
+
+.category_ol_label ol{
+    width: 100%;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    /* color: #30812f; */
+    list-style: none;
+    text-align: center;
+}
+
 /*! Stats CSS ends here */
+
+/* !CSS for lower div */
+
+.filter_area{
+    width: 100%;
+    height: 50%;
+    display: block;
+}
+
+.filter_head{
+    width: 100%;
+    height: 10%;
+    border: none;
+    /* border-bottom:2px solid #2f2f2f; */
+    background-color: #30812f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f2f2f2;
+    /* text-align: center; */
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    /* text-shadow: 0px 0px 10px #30812f; */
+    /* box-shadow: 0px 0px 10px #30812f; */
+}
+
+.filter_list{
+    width: 100%;
+    height: 90%;
+    /* background-color: blue; */
+    padding: 10px 5px;
+    overflow-y:scroll;
+    margin-top: 1px;
+}
+
+.filter_item{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* !lower div CSS ends here */
+
 /* !Left Tab CSS ends here */
 
 .expensearea{
-    width: 57%;
+    width: 49%;
     height: 100%;
     /* border: 2px solid black; */
     background-color: #f2f2f2;
@@ -137,7 +271,8 @@
     width: 100%;
     height: 80%;
     /* background-color: blue; */
-    padding: 10px 20px;
+    padding: 10px 5px;
+    overflow-y:scroll;
 }
 
 .expenseinput{
@@ -155,7 +290,7 @@
     width: 25%;
     height: 100%;
     display:inline-block;
-    padding-top: 4%;
+    padding-top: 2%;
 }
 
 .expensecategory_l,.expensename_l,.expenseamount_l{
@@ -200,6 +335,119 @@
 .save_button{
     width: 100%;
     height: 25px;
-    border: 1px solid black;
-    border-radius: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #30812f;
+    color: #f2f2f2;
 }
+
+/* CSS for the heading of the expense list */
+.labels{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #30812f;
+    font-weight: 700;
+}
+
+.date{
+    width: 30%;
+}
+
+.cat{
+    width: 25%;
+}
+
+.ename{
+    width: 25%;
+}
+
+.eamt{
+    width: 20%;
+}
+
+/* ends here */
+
+/* CSS for the Dynamically Rendered Expense List */
+
+.expense_item{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.timestamp{
+    width: 25%;
+    text-align: left;
+}
+
+.exp_cat{
+    width: 20%;
+    text-align: left;
+}
+
+.exp_n{
+    width: 20%;
+    text-align: left;
+}
+
+.exp_a{
+    /* color: #1ccd19; */
+    width: 15%;
+    background-color: #1ccd1966;
+    text-align: center;
+}
+
+.delete{
+    width: 15%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.delete button{
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #d61d1d;
+    color: #f2f2f2;
+    font-size: 15px;
+}
+
+/* expense item css ends here */
+
+/* ?CSS for feedback */
+
+.feedback{
+    width: 100%;
+    height: 25px;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback p{
+    text-transform: capitalize;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.feedback span{
+    text-transform: lowercase;
+    color: #30812f;
+    font-family: sans-serif;
+    font-weight: 700;
+    transition: 0.5s;
+}
+

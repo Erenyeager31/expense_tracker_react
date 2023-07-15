@@ -15,7 +15,7 @@ export default function Login() {
         const handlesubmit = async (e) =>{
             // alert("login")
             e.preventDefault();
-
+            // console.log("we are here")
             const response = await fetch("http://localhost:5000/api/auth/login",{
                 method:"POST",
                 headers:{
@@ -27,8 +27,21 @@ export default function Login() {
             // console.log(json);
 
             if(json.success){
+                // !If the login is cussesfull then we will use the api fetch_user to fetch the email of the user 
+                //! and then save it into the sessionstorage so it can be used to verify in App.js if an authorized user is
+                //! trying to access the homepage without login
+
                 //saving the auth token
-                localStorage.setItem("token",json.authtoken)
+                sessionStorage.setItem("token",json.authtoken)
+                const response =await fetch("http://localhost:5000/api/auth/fetchuser",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json",
+                    "auth-token":sessionStorage.getItem("token")
+                },
+            })            
+            const json_ = await response.json()
+            sessionStorage.setItem("email", json_.user.email)
                 nav("/Homepage")
             }
         }

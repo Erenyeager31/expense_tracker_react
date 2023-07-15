@@ -1,9 +1,23 @@
 import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
 import '../Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar(props) {
-  // alert(localStorage.getItem("token"))
+  // !Function to logout the user
+  const nav = useNavigate()
+
+  const handlelogout = (e) =>{
+    e.preventDefault()
+    // alert("hi")
+    sessionStorage.removeItem("email")
+    sessionStorage.removeItem("token")
+    nav("/")
+  }
+
+
+
+
   const[email,setemail] = useState("")
   
   const fetchuser = async () =>{
@@ -11,26 +25,21 @@ export default function Navbar(props) {
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",
-                    "auth-token":localStorage.getItem("token")
+                    "auth-token":sessionStorage.getItem("token")
                 },
             })            
             const json =await response.json()
             // console.log(json)
             setemail(json.user.email)
-            localStorage.setItem("email", json.user.email)
+            sessionStorage.setItem("email", json.user.email)
           }
   fetchuser()
   return (
     <div className='header'>
         <div className="logo">Expense Tracker</div>
-        <div className="menu">
-          <div className="a">a</div>
-          <div className="b">b</div>
-          <div className="c">c</div>
-        </div>
         <div className="user">
-          <div className="img_wrap"><div className="avatar"> <i className="fa fa-avatar"></i> </div></div>
           <div className="email">{email}</div>
+          <div className="logout"><button onClick={handlelogout}>LOGOUT</button></div>
         </div>
     </div>
   )
