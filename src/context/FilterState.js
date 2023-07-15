@@ -14,7 +14,7 @@ export default function FilterState(props) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "email": localStorage.getItem("email")
+        "email": sessionStorage.getItem("email")
       },
       body: JSON.stringify({ keyword: keyword, category: category, min: min, max: max })
     })
